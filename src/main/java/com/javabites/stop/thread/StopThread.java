@@ -1,12 +1,11 @@
-package com.javabits.stop.thread;
+package com.javabites.stop.thread;
 
 public class StopThread {
     static boolean stop = false;
     public static void runThread() {
         while(!stop) {
-            //System.out.println("thread is running");
-            long  startTime = System.currentTimeMillis();
         }
+        System.out.println("stopped");
     }
 
     public static void main(String[] args) {

@@ -9,10 +9,11 @@ public class ThreadVisibilityTest {
     public static void main(String[] args) throws Exception {
         Thread targetThread = new Thread(new Runnable() {
                 public void run() {
-                    while(!stopped)
-                        continue;
-                    System.out.println("Target thread gets signal and stops...");
+                    while(!stopped) {
+
                     }
+                    System.out.println("Target thread gets signal and stops...");
+                }
      });
 
         targetThread.start();
