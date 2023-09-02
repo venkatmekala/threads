@@ -18,7 +18,7 @@ public class WaiterTest {
         List<Thread> cooks = Stream.generate(() -> new Thread(new Cook(countDownLatch))).limit(3).toList();
         cooks.forEach(cook -> executorService.submit(cook));
         try {
-            countDownLatch.await();
+            countDownLatch.await(2, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

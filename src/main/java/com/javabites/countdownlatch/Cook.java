@@ -16,7 +16,7 @@ public class Cook implements Runnable {
 
     synchronized void doSomeWork() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
