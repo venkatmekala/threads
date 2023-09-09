@@ -19,7 +19,7 @@ public class Waiter {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        executorService.shutdown();
         System.out.println("Food is ready to be served");
+        executorService.shutdown();
     }
 }

@@ -9,12 +9,12 @@ public class Cook implements Runnable {
     }
     @Override
     public void run() {
-        doSomeWork();
+        cookFood();
         countDownLatch.countDown();
         System.out.println("Cook "+ Thread.currentThread().getName() + " kept the dish on the plate");
     }
 
-    synchronized void doSomeWork() {
+     void cookFood() {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {

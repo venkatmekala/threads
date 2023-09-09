@@ -13,7 +13,10 @@ public class Player implements Runnable {
     public void run() {
 
         try {
-            System.out.println("Player "+ Thread.currentThread().getName() + " reached the barrier");
+            System.out.println("Player "+ Thread.currentThread().getName() + " reached the barrier 1");
+            cyclicBarrier.await();
+
+            System.out.println("Player "+ Thread.currentThread().getName() + " reached the barrier 2");
             cyclicBarrier.await();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
