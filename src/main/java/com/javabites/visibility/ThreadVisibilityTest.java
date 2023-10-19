@@ -5,12 +5,11 @@ import java.util.concurrent.TimeUnit;
 public class ThreadVisibilityTest {
 
     //Shared variable to send a signal to the thread
-     volatile static boolean stopped = false;
+     static boolean stopped = false;
     public static void main(String[] args) throws Exception {
         Thread targetThread = new Thread(new Runnable() {
                 public void run() {
                     while(!stopped) {
-
                     }
                     System.out.println("Target thread gets signal and stops...");
                 }
